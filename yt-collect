@@ -1,0 +1,3 @@
+#!/bin/sh
+# Ask the running Firefox's YouTube Tab Collector extension to gather all YouTube tabs.
+exec flatpak run org.mozilla.firefox --new-tab "http://yt-collect.invalid/"

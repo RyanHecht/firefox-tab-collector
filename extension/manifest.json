@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Tab Collector",
+  "version": "1.0.0",
+  "description": "Gathers every YouTube tab from all windows into one new window, de-duplicating homepages.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-collector@ryanhecht",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "*://yt-collect.invalid/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Collect YouTube tabs"
+  }
+}
